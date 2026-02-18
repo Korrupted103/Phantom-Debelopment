@@ -1,6 +1,6 @@
 # Phantom Obfuscator API Usage Examples
 
-This repository demonstrates how to send Lua scripts to the [Phantom Obfuscator API](https://api.phantomdevelopment.org/obf) in **Node.js**, **Python**, **C++**, and **C#**.  
+This repository demonstrates how to send Lua scripts to the [Phantom Obfuscator API](https://api.phantomdevelopments.org/obf) in **Node.js**, **Python**, **C++**, and **C#**.  
 
 All examples send a Lua script with your `x-api-key` in headers and return the obfuscated code.
 
@@ -18,7 +18,7 @@ All examples send a Lua script with your `x-api-key` in headers and return the o
 ```js
 const script_key = "key_here"
 const lua = `print("hello world")`
-fetch("https://api.phantomdevelopment.org/obf", {
+fetch("https://api.phantomdevelopments.org/obf", {
   method: "POST",
   headers: { "Content-Type": "text/plain", "x-api-key": script_key },
   body: lua
@@ -34,7 +34,7 @@ script_key = "key_here"
 lua = "print('hello world')"
 
 res = requests.post(
-    "https://api.phantomdevelopment.org/obf",
+    "https://api.phantomdevelopments.org/obf",
     headers={
         "Content-Type": "text/plain",
         "x-api-key": script_key
@@ -71,7 +71,7 @@ int main(){
         headers = curl_slist_append(headers, ("x-api-key: " + script_key).c_str());
         headers = curl_slist_append(headers, "Content-Type: text/plain");
 
-        curl_easy_setopt(curl, CURLOPT_URL, "https://api.phantomdevelopment.org/obf");
+        curl_easy_setopt(curl, CURLOPT_URL, "https://api.phantomdevelopments.org/obf");
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, lua.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
@@ -99,7 +99,7 @@ class Program {
         string script_key = "key_here";
         string lua = "print('hello world')";
         using var client = new HttpClient();
-        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.phantomdevelopment.org/obf") {
+        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.phantomdevelopments.org/obf") {
             Content = new StringContent(lua, Encoding.UTF8, "text/plain")
         };
         request.Headers.Add("x-api-key", script_key);
