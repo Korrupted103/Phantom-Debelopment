@@ -55,7 +55,7 @@ else:
     print(f"Error {res.status_code}: {res.text}")
 ```
 
-##C++
+## C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -94,7 +94,7 @@ int main(){
     return 0;
 }
 ```
-##C#
+## C#
 ```C#
 using System;
 using System.Net.Http;
