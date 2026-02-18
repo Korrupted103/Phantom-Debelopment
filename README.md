@@ -18,18 +18,11 @@ All examples send a Lua script with your `x-api-key` in headers and return the o
 ```js
 const script_key = "key_here"
 const lua = `print("hello world")`
-
-const res = await fetch("https://api.phantomdevelopment.org/obf", {
+fetch("https://api.phantomdevelopment.org/obf", {
   method: "POST",
-  headers: {
-    "Content-Type": "text/plain",
-    "x-api-key": script_key
-  },
+  headers: { "Content-Type": "text/plain", "x-api-key": script_key },
   body: lua
-})
-
-const out = await res.text()
-console.log(out)
+}).then(r => r.text()).then(console.log).catch(console.error)
 ```
 
 ## Python
