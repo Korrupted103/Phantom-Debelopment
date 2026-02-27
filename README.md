@@ -1,7 +1,3 @@
-Ok lets update this so it reads input.lua writes output.lua 
-
-So modify examples
-
 # Phantom Obfuscator API Usage Examples
 
 This repository demonstrates how to send Lua scripts to the [Phantom Obfuscator API](https://api.phantomdevelopments.org/obf) in **Node.js**, **Python**, **C++**, and **C#**.  
@@ -13,7 +9,12 @@ All examples send a Lua script with your `x-api-key` in headers and return the o
 ## Setup
 
 1. Replace `key_here` with your whitelisted key.  
-2. Replace the Lua script with your own code.  
+2. Create `input.lua` file.
+3. Put your lua source inside `input.lua`
+4. Run the index.js
+5. Obfuscated script should be inside output.lua
+
+Have fun skidds
 
 ---
 
